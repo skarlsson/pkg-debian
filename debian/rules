@@ -298,7 +298,7 @@ binary-arch: build install-arch
 	dh_shlibdeps -a -Ncollectd-core -Ncollectd
 	dpkg-shlibdeps -Tdebian/collectd.substvars \
 		-dDepends debian/collectd-core/usr/lib/collectd/rrdtool.so
-	dpkg-shlibdeps -Tdebian/collectd-core.substvars \
+	dpkg-shlibdeps -Tdebian/collectd-core.substvars --dpkg-shlibdeps-params=--ignore-missing-info\
 		-dDepends debian/collectd-core/usr/sbin/* \
 		-dSuggests debian/collectd-core/usr/lib/collectd/*.so
 	grep shlibs:Suggests debian/collectd-core.substvars \
