@@ -74,6 +74,9 @@ confflags += --disable-tape
 # libaquaero5 is required for the aquaero plugin
 confflags += --disable-aquaero
 
+#for ubuntu 12.04
+confflags += --disable-lvm
+
 # libmic is required for the mic plugin
 confflags += --disable-mic
 
